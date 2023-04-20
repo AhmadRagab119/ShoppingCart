@@ -1,0 +1,202 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+        font-family: 'Open Sans', sans-serif;
+}
+.project{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+    background-color: white;
+    margin-bottom: 50px;
+}
+header .logo{
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 30px;
+    cursor: pointer;
+}
+header i {
+    font-size: 30px;
+    background-color: transparent;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/* Shopping cart */
+
+header .shoping-cart {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: -40%;
+    background-color: white;
+    height: 100vh;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.show-bag {
+    right: 0 !important;
+}
+
+header .shoping-cart i {
+position: relative;
+left:88%;
+top: 10px;
+font-size: 23px;
+}
+header .shoping-cart h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+
+}
+header .shoping-cart .total {
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 5px;
+}
+header .shoping-cart button {
+    display: block;
+    background-color: red;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+    width: fit-content;
+    margin:  20px auto 0;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+/* Orders */
+
+header .shoping-cart .orders {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 0 30px;
+}
+
+header .shoping-cart .orders .order {
+    display: flex;
+     justify-content: space-around;
+    align-items: center;
+}
+header .shoping-cart .orders .order img {
+    width: 120px;
+}
+header .shoping-cart .orders .order .info {
+    line-height: 40px;
+    margin-left: 20px;
+}
+header .shoping-cart .orders .order .info .title-order{
+    font-size: 20px;
+}
+header .shoping-cart .orders .order .delete i {
+    color: red;
+    cursor: pointer;
+}
+
+header .shoping-cart .orders .order .info input {
+    width: 40px;
+}
+
+/* container */
+
+.container{
+    padding: 20px 0 50px;
+}
+.container h2 {
+text-align: center;
+font-size: 28px;
+font-weight: 600;
+padding: 70px 0 30px;
+}
+.container .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 30px;
+}
+.container .products .product {
+    flex:1 0 230px;
+    padding: 20px;
+    box-shadow: 0 0 10px transparent;
+    transition: 0.3s;
+    border-radius: 7px;
+}
+.container .products .product:hover{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 30%);
+}
+.container .products .product .image {
+    width: 100%;
+}
+.container .products .product .image img {
+    width: 100%;
+}
+.container .products .product .info .name {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 12px 0;
+}
+.container .products .product .info .reservation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .products .product .info .reservation .price {
+    font-size: 17px;
+}
+.container .products .product .info .reservation .btn{
+    border: none;
+}
+.container .products .product .info .reservation .btn:disabled i{
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+.container .products .product .info .reservation i {
+    font-size: 18px;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media (min-width:300px) and (max-width:767px) {
+    header .shoping-cart {
+        width: 100%;
+        right: calc(-100% - 100px);
+    }
+    header .shoping-cart .orders{
+        padding: 0 30px 30px;
+    }
+    .container{
+        padding: 20px 0 100px;
+    }
+    header .shoping-cart button {
+        margin-bottom: 150px;
+    }
+}
